@@ -13,8 +13,8 @@ const getInitialTheme = (): ThemeMode => {
     if (savedTheme === 'light' || savedTheme === 'dark') {
       return savedTheme
     }
-    // Check system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    // Default to dark theme (changed from system preference check)
+    return 'dark'
   }
   return 'dark'
 }

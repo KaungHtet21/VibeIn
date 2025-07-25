@@ -6,9 +6,9 @@ import AppProvider from './AppProvider.tsx'
 // Initialize theme class on document
 if (typeof window !== 'undefined') {
   const savedTheme = localStorage.getItem('theme')
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-  const theme = savedTheme || (prefersDark ? 'dark' : 'light')
-  
+  // Default to dark theme
+  const theme = savedTheme || 'dark'
+
   document.documentElement.classList.toggle('dark', theme === 'dark')
 }
 
