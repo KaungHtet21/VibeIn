@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { EventFilters, EventList, EventDetails } from '../components/organisms'
 import { ThemeToggle } from '../components/atoms'
-import { useEventFilters, useTheme } from '../hooks'
+import { useEventFilters } from '../hooks'
 import { Sparkles, Zap, Calendar, TrendingUp } from 'lucide-react'
 
 export function HomePage() {
   const [selectedEventId, setSelectedEventId] = useState<string | null>(null)
   const { filters, updateFilter, clearFilters, hasActiveFilters } = useEventFilters()
-  const { isDark } = useTheme()
 
   const handleEventClick = (eventId: string) => {
     setSelectedEventId(eventId)

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Sun, Moon, Sparkles } from 'lucide-react'
 import { useTheme } from '../../hooks'
 import { cn } from '../../utils'
@@ -8,7 +7,7 @@ interface ThemeToggleProps {
 }
 
 export function ThemeToggle({ className }: ThemeToggleProps) {
-  const { theme, toggle, isDark } = useTheme()
+  const { toggle, isDark } = useTheme()
 
   return (
     <button

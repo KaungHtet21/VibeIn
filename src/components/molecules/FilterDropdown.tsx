@@ -1,5 +1,4 @@
-import React from 'react'
-import { Filter, ChevronDown } from 'lucide-react'
+import { Filter } from 'lucide-react'
 import { 
   Select, 
   SelectContent, 

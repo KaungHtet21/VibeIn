@@ -1,4 +1,3 @@
-import React from 'react'
 import { Search, Sparkles } from 'lucide-react'
 import { Input } from '../atoms'
 import { cn } from '../../utils'

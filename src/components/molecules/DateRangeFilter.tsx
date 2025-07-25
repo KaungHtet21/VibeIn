@@ -1,4 +1,3 @@
-import React from 'react'
 import { CalendarDays, ArrowRight } from 'lucide-react'
 import { Input } from '../atoms'
 import { cn } from '../../utils'

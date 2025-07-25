@@ -1,8 +1,6 @@
-import React from 'react'
 import { RotateCcw, Sparkles } from 'lucide-react'
 import { SearchBar, FilterDropdown, DateRangeFilter } from '../molecules'
 import { Button } from '../atoms'
-import { useEventFilters } from '../../hooks'
 import type { EventFilter, EventType } from '../../types'
 import { cn } from '../../utils'
 

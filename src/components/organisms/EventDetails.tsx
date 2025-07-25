@@ -1,6 +1,5 @@
-import React from 'react'
-import { X, Calendar, MapPin, Clock, Users, User, DollarSign, Globe, Zap, Heart, Share, Sparkles } from 'lucide-react'
-import { Button, Badge, Card, CardContent, CardHeader, CardTitle } from '../atoms'
+import { X, Calendar, MapPin, Users, User, DollarSign, Globe, Zap, Heart, Share, Sparkles } from 'lucide-react'
+import { Button, Card, CardContent } from '../atoms'
 import { useEvent } from '../../hooks'
 import { formatDateTime } from '../../utils'
 import { cn } from '../../utils'

@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Loader2, AlertCircle, Sparkles, TrendingUp, ArrowDown } from 'lucide-react'
 import { EventCard } from '../molecules'
 import { Button } from '../atoms'
 import { useInfiniteEvents } from '../../hooks'
 import type { EventFilter, Event } from '../../types'
+import type { InfiniteEventListResponse } from '../../api/events'
 import { cn } from '../../utils'
 
 interface EventListProps {
@@ -41,7 +42,7 @@ export function EventList({ filters, onEventClick, className }: EventListProps) 
   }, [fetchNextPage, hasNextPage, isFetchingNextPage])
 
   // Calculate total events loaded
-  const totalEvents = data?.pages.reduce((acc: number, page: any) => acc + page.events.length, 0) || 0
+  const totalEvents = data?.pages.reduce((acc: number, page: InfiniteEventListResponse) => acc + page.events.length, 0) || 0
   const totalCount = data?.pages[0]?.totalCount || 0
 
   if (isLoading) {
@@ -99,7 +100,7 @@ export function EventList({ filters, onEventClick, className }: EventListProps) 
     )
   }
 
-  const allEvents: Event[] = data?.pages.flatMap((page: any) => page.events) || []
+  const allEvents: Event[] = data?.pages.flatMap((page: InfiniteEventListResponse) => page.events) || []
 
   if (allEvents.length === 0) {
     return (

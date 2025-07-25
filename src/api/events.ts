@@ -67,7 +67,7 @@ const generateMockEvents = (): Event[] => {
     events.push({
       id: (i + 1).toString(),
       title,
-      description: generateEventDescription(eventType, title),
+      description: generateEventDescription(eventType),
       location: locations[Math.floor(Math.random() * locations.length)],
       date: eventDate.toISOString(),
       time: eventDate.toLocaleTimeString('en-US', { 
@@ -86,7 +86,7 @@ const generateMockEvents = (): Event[] => {
   return events.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 }
 
-const generateEventDescription = (type: string, title: string): string => {
+const generateEventDescription = (type: string): string => {
   const descriptions = {
     Workshop: `Join this hands-on workshop where you'll learn practical skills and techniques. Perfect for both beginners and experienced practitioners looking to expand their knowledge.`,
     Concert: `Experience an unforgettable musical performance featuring talented artists. Enjoy great music, atmosphere, and connect with fellow music lovers.`,
